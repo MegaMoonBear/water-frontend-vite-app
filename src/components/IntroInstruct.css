@@ -1,0 +1,9 @@
+/* CSS file to match JSX file - Navbar */
+
+/* background-color as blanched almond (#FFEBCD); Prior: Eggshell (#F7F6F2) */
+/* font "color" as Deep Wetland Blue */
+.body {
+  font-family: Calibri, sans-serif;
+  color: #213547; 
+  background-color: #FFEBCD; 
+}

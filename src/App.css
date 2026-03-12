@@ -10,36 +10,8 @@
   clip-path: inset(16.66%); /* Removes 1/6th of the width and height from all sides */
 }
 
-/* Updated font family */
-body {
-  font-family: Calibri, sans-serif;
-  background-color: #FFEBCD; /* blanched almond (#FFEBCD); Prior: Off-white / Eggshell (#F7F6F2) */
-}
-
-/* color reference list at bottom */
-
-.App-header {
-  background-color: #133E3A; /* Dark Teal / Bog */
-  color: #F7F6F2; /* Off-white / Eggshell */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
 .App-link {
   color: #0F7A87; /* Pond Teal / Deep Aqua */
-}
-
-button {
-  background-color: #2F6B3A; /* Marsh Green */
-  color: white;
-}
-
-button:hover {
-  background-color: #265A2E; /* Slightly darker Marsh Green */
 }
 
 .critical-cta {

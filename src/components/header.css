@@ -1,0 +1,23 @@
+/* CSS file to match JSX file - Header */
+
+/* background-color as Dark Teal or Bog */
+/* .header-container {
+    background-color: #133E3A; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* background-color as Dark Teal or Bog */
+/* font "color" as Off-white / Eggshell */
+.header {
+  font-family: Calibri, sans-serif;
+  color: #213547; 
+  background-color: #FFEBCD; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
