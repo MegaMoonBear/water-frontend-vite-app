@@ -1,6 +1,3 @@
-// don't need to refer to "react"  unless explicitly using React 
-    // (e.g., React.Component or React.createElement)
-import React from 'react'; 
 import './header.css';
 
 function Header() {
