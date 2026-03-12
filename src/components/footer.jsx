@@ -1,8 +1,4 @@
 // Footer simplified, so only my contact info and banner image
-
-// Not needed to refer to "react" unless explicitly using React 
-// (e.g., React.Component or React.createElement)
-import React from 'react';
 import './Footer.css';
 
 function Footer() {
