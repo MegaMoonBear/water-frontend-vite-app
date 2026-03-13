@@ -1,4 +1,4 @@
- import './ChooseUpload_OutpAI.css';
+import './ChooseUpload_OutpAI.css';
 import { useState } from 'react';
 // Div to "Choose File", then Upload Photo file and trigger AI analysis of the photo, with output of AI-generated description.
     // First button to "Choose File"
