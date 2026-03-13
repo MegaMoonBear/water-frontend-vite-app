@@ -9,21 +9,34 @@ import ChooseUploadOutpAI from './components/ChooseUpload_OutpAI.jsx'
 import Footer from './components/footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-  // useState to keep photo if refresh before Submit or AI output, but not yet implemented.
+  const [count, setCount] = useState(0); // Tracks the number of button clicks
+  const [successfulUploads, setSuccessfulUploads] = useState(0); // Tracks successful uploads
 
   return (
-  <div>
+    <div>
+      <Navbar />
+      <Header />
 
-    <Navbar />
-    <Header />
+      <IntroInstruct />
+      <ChooseUploadOutpAI 
+        count={count} 
+        setCount={setCount} 
+        setSuccessfulUploads={setSuccessfulUploads} // Pass state setters to child component
+      />
 
-    <IntroInstruct />
-    <ChooseUploadOutpAI />
+      <div style={{ textAlign: 'center', margin: '20px' }}>
+        <p>Button Clicks: {count}</p> {/* Display the number of button clicks */}
+        <p>Successful Uploads: {successfulUploads}</p> {/* Display the number of successful uploads */}
+        {count > successfulUploads && (
+          <p style={{ color: 'red' }}>
+            Warning: Not all uploads were successful!
+          </p>
+        )}
+      </div>
 
-    <Footer />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
