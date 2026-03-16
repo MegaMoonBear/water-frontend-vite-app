@@ -1,4 +1,4 @@
-import './IntroInstruct.css';
+
 
 // Introductory paragraph and instructions for how to use the site,...
     // ...including a call-to-action to share a photo of water or a wetland. 

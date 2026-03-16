@@ -1,5 +1,5 @@
 // Footer simplified, so only my contact info and banner image
-import './Footer.css';
+
 
 function Footer() {
   return (

@@ -1,68 +1,112 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* Color Palette Implementation */
+  /* Final chosen colors - listed at bottom of file */
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: #FFEBCD; /* Previous: Off-white / Eggshell (#F7F6F2) */
+  color: #1B4F72; /* Deep Wetland Blue */
+  font-family: Calibri, sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center items */
+  justify-content: flex-start; /* Align items to the left */
+  padding: 10px; /* Add padding around the header */
+}
+
+header img {
+  width: 70px; /* Adjust logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between logo and heading */
+  margin-left: 15px; /* Align with nav bar's first item */
+}
+
+header h1 {
+  margin: 0; /* Remove default margins */
+  color: #1B4F72; /* Deep Wetland Blue */
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: #2F6B3A; /* Marsh Green */
+  color: white;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background-color: #265A2E; /* Slightly darker Marsh Green */
+}
+
+.critical-cta {
+  background-color: #7A2E2E; /* Crawfish / Mud Red */
+  color: white;
+}
+
+.card {
+  background-color: #F1F4EF; /* Very Light Sage */
+  color: #1B4F72; /* Deep Wetland Blue */
+}
+
+.icon {
+  color: #0F7A87; /* Pond Teal / Deep Aqua */
+}
+
+.badge {
+  background-color: #B58F3B; /* Reed / Gold */
+  color: white;
+}
+
+/* users will see code font styling if <code> elements in  HTML or React components. 
+  typically used to display inline code snippets or blocks of code. 
+  font family ensures that the code appears in a monospaced style - standard for readable programming */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Final chosen colors - 9 colors total, which is a sweet spot for consistency and accessibility
+    Headings, icons, accents
+        Deep Wetland Blue (primary text + headings)
+        Dark Teal / Bog (footer, nav bars, heavy emphasis)
+        Pond Teal / Deep Aqua (iconography, secondary accents)
+        Marsh Green (buttons, map layers, status indicators)
+        Crawfish / Mud Red (very sparing CTA / alert accent)
+
+    Light accents: Reed / Gold (CTA highlight, hover states, counts)
+
+    Backgrounds 
+        Off-white / Eggshell (primary reading surface)
+        Very Light Sage (secondary panels, cards, map UI) 
+*/
+
+/* Styling for the navigation bar */
+nav {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center items */
+  background-color: #133E3A; /* Dark Teal / Bog */
+  padding: 10px;
+}
+
+nav img {
+  width: 50px; /* Adjust logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 15px; /* Space between logo and nav items */
+}
+
+nav ul {
+  list-style: none; /* Remove bullets */
+  display: flex; /* Display items horizontally */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+  color: #F7F6F2; /* Off-white / Eggshell */
+  text-decoration: none; /* Remove underline */
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }

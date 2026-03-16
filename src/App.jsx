@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { get } from './apiService'; // Adjust the path as needed
 
 import './App.css'
 import Navbar from './components/navbar.jsx'
@@ -11,18 +10,18 @@ import Footer from './components/footer.jsx'
 function App() {
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await get('/api/get-photo-fact');
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const result = await get('/api/get-photo-fact');
+  //       setData(result);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <div>
