@@ -1,5 +1,7 @@
 import './ChooseUpload_OutpAI.css';
 import { useState } from 'react';
+import { post } from '../apiService'; // Adjust the path as needed
+
 // Div to "Choose File", then Upload Photo file and trigger AI analysis of the photo, with output of AI-generated description.
     // First button to "Choose File"
         // Section with placeholder for output of AI-generated description, after upload and analysis.
@@ -15,7 +17,7 @@ function ChooseUploadOutpAI({ count, setCount, setSuccessfulUploads }) {
         // Here you can add code to handle the file, such as uploading it to a server or displaying a preview.
     }
 
-    const handleUpload = () => {
+    const handleUpload = async () => {
         setCount(count + 1); // Increment button click count
 
         // Simulate a successful upload (replace this with actual upload logic)
@@ -25,15 +27,17 @@ function ChooseUploadOutpAI({ count, setCount, setSuccessfulUploads }) {
         }
     }
 
-    fetch('http://localhost:8000/upload-image', {
-        method: 'POST',
-        headers: {
-            'Content-Type':  "image/*"
-        },
-        body: file,
+    const handleFileUpload = async (file) => {
+        try {
+            const response = await post('/upload-image', file);
+            console.log('File uploaded successfully:', response);
+        } catch (error) {
+            console.error('Error uploading file:', error);
+        }
     }
-)
-   
+
+    handleChange(e) => handleFileUpload(e.target.files[0])
+
     console.log(file); // This will log the selected file to the console for testing purposes.
     return (
         <div id="PickUploadAI">

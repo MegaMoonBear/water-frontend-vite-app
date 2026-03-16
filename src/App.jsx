@@ -1,5 +1,5 @@
-// import { useState } from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { get } from './apiService'; // Adjust the path as needed
 
 import './App.css'
 import Navbar from './components/navbar.jsx'
@@ -9,8 +9,20 @@ import ChooseUploadOutpAI from './components/ChooseUpload_OutpAI.jsx'
 import Footer from './components/footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0); // Tracks the number of button clicks
-  const [successfulUploads, setSuccessfulUploads] = useState(0); // Tracks successful uploads
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await get('/api/get-photo-fact');
+        setData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -18,20 +30,11 @@ function App() {
       <Header />
 
       <IntroInstruct />
-      <ChooseUploadOutpAI 
-        count={count} 
-        setCount={setCount} 
-        setSuccessfulUploads={setSuccessfulUploads} // Pass state setters to child component
-      />
+      <ChooseUploadOutpAI />
 
       <div style={{ textAlign: 'center', margin: '20px' }}>
-        <p>Button Clicks: {count}</p> {/* Display the number of button clicks */}
-        <p>Successful Uploads: {successfulUploads}</p> {/* Display the number of successful uploads */}
-        {count > successfulUploads && (
-          <p style={{ color: 'red' }}>
-            Warning: Not all uploads were successful!
-          </p>
-        )}
+        <p>Data from Backend:</p>
+        {data ? <p>{data.message}</p> : <p>Loading...</p>}
       </div>
 
       <Footer />
