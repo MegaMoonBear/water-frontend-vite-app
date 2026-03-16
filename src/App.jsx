@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import './App.css'
 import Navbar from './components/navbar.jsx'
@@ -10,19 +10,6 @@ import Footer from './components/footer.jsx'
 function App() {
   const [data, setData] = useState(null);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const result = await get('/api/get-photo-fact');
-  //       setData(result);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   return (
     <div>
       <Navbar />
@@ -30,11 +17,6 @@ function App() {
 
       <IntroInstruct />
       <ChooseUploadOutpAI />
-
-      <div style={{ textAlign: 'center', margin: '20px' }}>
-        <p>Data from Backend:</p>
-        {data ? <p>{data.message}</p> : <p>Loading...</p>}
-      </div>
 
       <Footer />
     </div>
