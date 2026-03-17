@@ -74,12 +74,11 @@ const handleFileUpload = async () => {
             {/* Upload button */}
             <button id="upload-button" type="button" onClick={() => handleFileUpload()}>Upload</button>
             <p id="upload-message">Thanks for sharing your photo! Wait for info from AI or upload another photo.</p> 
-            <p>Please come back in less than a week.</p>
+            {/* <p>Please come back in less than a week.</p> */}
             
             {/* AI-output placeholder */}
             <section id="ai-output">
-                <h3>AI Analysis</h3>
-                <p>Your photo is being analyzed. Please wait for info about your photo.</p>
+                <h3>AI Analysis - Please wait for info about your photo.</h3>
                 <div id="ai-description"></div>
             </section> 
             

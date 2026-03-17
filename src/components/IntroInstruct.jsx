@@ -4,10 +4,11 @@
 function IntroInstr() { 
     return (
         <div id="Intro_Instruct">
-          <p>Many of us see water in our neighborhoods. Even small streams and ponds help clean our water and reduce flooding. </p>
+          <p>Many of us see water in our neighborhoods. Even temporary puddles and trickling runoff can help clean our water and reduce flooding. </p>
           <p>Share a photo of water or a wetland in less than a minute.</p> 
             <ol>
               <li>Click <strong>"Choose File"</strong> button, then select your photo. </li> 
+              <li>Look for your file name between buttons. </li>
               <li>Click <strong>"Upload"</strong> button to submit. </li>
               <li>Scroll down and wait a moment for the AI to describe your photo. </li>
             </ol>

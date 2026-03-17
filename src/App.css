@@ -3,17 +3,23 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  width: '50px'; 
+  height: 'auto';
   pointer-events: none;
-  border-radius: 50%; /* Rounds the corners */
+  /*border-radius: 50%;  Rounds the corners */
   object-fit: cover; /* Ensures the image scales properly */
-  clip-path: inset(16.66%); /* Removes 1/6th of the width and height from all sides */
+  /*clip-path: inset(10%); Removes 1/10th of the width and height from all sides */
 }
 
 /* Updated font family */
 body {
   font-family: Calibri, sans-serif;
   background-color: #FFEBCD; /* blanched almond (#FFEBCD); Prior: Off-white / Eggshell (#F7F6F2) */
+}
+
+img {
+  width: '100 px'; 
+  height: 'auto';
 }
 
 /* color reference list at bottom */
@@ -51,7 +57,6 @@ button:hover {
   background-color: #B58F3B; /* Reed / Gold */
   color: white;
 }
-
 
 /* Final chosen colors - 9 colors total, which is a sweet spot for consistency and accessibility
     Headings, icons, accents
