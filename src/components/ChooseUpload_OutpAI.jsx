@@ -3,7 +3,8 @@ import { useState } from 'react';
 function ChooseUploadOutpAI() { 
     const [file, setFile] = useState(null);
     const [aiResponse, setAiResponse] = useState(""); // <-- New state for AI output
-    
+    const [showMessage, setShowMessage] = useState(false); // <-- New state to control message visibility
+
     const handleChange = (e) => {
         const uploadedFile = e.target.files[0];
         setFile(uploadedFile);
@@ -50,6 +51,9 @@ function ChooseUploadOutpAI() {
                 setAiResponse("No AI response returned.");
             }
 
+            // Show the message after upload
+            setShowMessage(true);
+
         } catch (error) {
             console.error("Error uploading file:", error);
             setAiResponse("Error uploading file. Please try again.");
@@ -65,13 +69,13 @@ function ChooseUploadOutpAI() {
             {/* Upload button */}
             <button id="upload-button" type="button" onClick={handleFileUpload}>Upload</button>
             
-            <p id="upload-message">Thanks for sharing your photo! Wait for info from AI or upload another photo.</p> 
+            {/* Conditional message display */}
+            {showMessage && (
+                <p id="upload-message">Thanks for sharing your photo! Wait for info from AI (below) or upload another photo.</p>
+            )}
             
             {/* AI-output placeholder */}
-            <section id="ai-output">
-                <h3>AI Analysis</h3>
-                <div id="ai-description">{aiResponse || "Please wait for info about your photo."}</div>
-            </section> 
+            <p><strong>AI Analysis:</strong> <span id="ai-description">{aiResponse || "Once you upload a photo, please wait for info about your photo."}</span></p>
             
         </div>
     );
