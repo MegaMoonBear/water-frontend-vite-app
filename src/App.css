@@ -17,7 +17,7 @@
   background-color: rgba(255, 255, 255, 0.8); /* White overlay for opacity */
     /* background-blend-mode: lighten; /* Blend the image with the white overlay */
 body {
-  background-color: #FFEBCD;  blanched almond
+  background-color: #FFEBCD;  /* Blanched Almond */
   font-family: Calibri, sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.25rem); /* Scales between 1rem and 1.25rem */
   line-height: 1.6;
