@@ -12,12 +12,13 @@
 }
 
 /* Updated font family and background (from background-color: #FFEBCD;  blanched almond */
-body {
-  font-family: Calibri, sans-serif;
-  background: url('./src/assets/Unsplash%20WaterPond%20BarnWhite.png') no-repeat center center fixed;
+  /* background: url('./src/assets/Unsplash%20WaterPond%20BarnWhite.png') no-repeat center center fixed;
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.8); /* White overlay for opacity */
-  background-blend-mode: lighten; /* Blend the image with the white overlay */
+    /* background-blend-mode: lighten; /* Blend the image with the white overlay */
+body {
+  background-color: #FFEBCD;  blanched almond
+  font-family: Calibri, sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.25rem); /* Scales between 1rem and 1.25rem */
   line-height: 1.6;
   color: #0F7A87; /* Pond Teal for body text */
